@@ -1,5 +1,4 @@
-```markdown
-# 🚀 Advanced Playwright-TypeScript Hybrid Automation Framework
+# Advanced Playwright-TypeScript Hybrid Automation Framework
 
 A high-performance, enterprise-grade automation framework built with **Playwright** and **TypeScript**. This project implements a modern **Function-based Page Object Model (POM)** architecture, designed for scalability, reusability, and seamless CI/CD integration.
 
@@ -45,7 +44,6 @@ A high-performance, enterprise-grade automation framework built with **Playwrigh
 ├── testdata/              # Externalized test data files
 ├── playwright.config.ts   # Playwright global configuration
 └── package.json           # Project dependencies and scripts
-```
 
 ---
 
