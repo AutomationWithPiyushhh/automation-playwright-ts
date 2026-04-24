@@ -14,6 +14,7 @@ test.describe('Saucedemo tests for successful, unsuccessful logins and add produ
     await ProductsPage.verifyProductsPageDisplayed();
   });
 
+
   test('Saucedemo test - Add product to cart', async () => {
     await LoginPage.navigateToSauceDemoLoginPage();
     await LoginPage.logInSuccessfully();
