@@ -35,3 +35,13 @@ export async function expectElementToContainText(locator: Locator | string, text
   const element = typeof locator === 'string' ? getPage().locator(locator) : locator;
   await expect(element).toContainText(text);
 }
+
+/**
+ * સ્ક્રીન પર કોઈ એલિમેન્ટ કેટલી વાર (Count) દેખાય છે તે ચેક કરવા.
+ * દા.ત. પેજ પર 6 પ્રોડક્ટ્સ છે કે નહીં.
+ */
+export async function expectElementCount(locator: Locator | string, count: number) {
+  const element = typeof locator === 'string' ? getPage().locator(locator) : locator;
+  await expect(element).toHaveCount(count);
+}
+

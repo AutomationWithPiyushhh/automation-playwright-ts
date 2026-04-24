@@ -45,3 +45,12 @@ export async function pressKey(locator: Locator | string, key: string) {
   const element = typeof locator === 'string' ? getPage().locator(locator) : locator;
   await element.press(key);
 }
+
+
+/**
+ * ડ્રોપડાઉન (Select tag) માંથી કોઈ ઓપ્શન સિલેક્ટ કરવા માટે.
+ */
+export async function selectOption(locator: Locator | string, value: string) {
+  const element = typeof locator === 'string' ? getPage().locator(locator) : locator;
+  await element.selectOption(value);
+}

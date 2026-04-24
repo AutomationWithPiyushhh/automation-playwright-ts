@@ -11,3 +11,8 @@ export const failureLoginCredentials = {
   username: 'locked_out_user',
   password: 'secret_sauce',
 };
+
+export const invalidLoginCredentials = {
+  username: 'invalid_user',
+  password: 'wrong_password',
+};
