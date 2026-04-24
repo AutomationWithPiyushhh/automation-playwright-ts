@@ -45,7 +45,7 @@ A high-performance, enterprise-grade automation framework built with **Playwrigh
 ├── playwright.config.ts   # Playwright global configuration
 └── package.json           # Project dependencies and scripts
 
----
+```
 
 ## 🚀 Getting Started
 
