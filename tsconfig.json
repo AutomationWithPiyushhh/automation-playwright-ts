@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ActionUtils": ["src/vasu-playwright/utils/action-utils.ts"],
+      "@AssertUtils": ["src/vasu-playwright/utils/assert-utils.ts"],
+      "@LocatorUtils": ["src/vasu-playwright/utils/locator-utils.ts"],
+      "@PageSetup": ["src/vasu-playwright/setup/page-setup.ts"],
+      "tests/*": ["tests/*"],
+      "utils/*": ["src/vasu-playwright/utils/*"],
+      "setup/*": ["src/vasu-playwright/setup/*"]
+    }
+  },
+  "include": ["tests/**/*.ts", "src/**/*.ts", "playwright.config.ts"]
+}
