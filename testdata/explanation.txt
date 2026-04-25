@@ -1,0 +1,46 @@
+For my recent project automating the Swag Labs E-commerce application, 
+I built a robust, highly scalable Hybrid Automation Framework from scratch 
+using Playwright and TypeScript. 
+
+[Section 1: The Core Architecture & POM]
+When designing this framework, my primary goal was maintainability and readability. 
+Instead of using the traditional, bulky Class-based Page Object Model, 
+I implemented a modern Function-based Page Object Model.
+In my tests/pages directory, each page—like Login, Products, Cart, 
+and Checkout—has its own TypeScript file. However, instead of creating classes 
+and instantiating objects, I export pure asynchronous functions and localized selectors.
+This approach drastically reduces memory overhead, prevents state-management issues,
+and makes the code much cleaner.
+
+[Section 2: Custom Utility Wrappers - The 'Secret Sauce']
+To ensure the actual test scripts are clean and easy to read for 
+anyone—even manual testers or stakeholders—I built a custom utility 
+layer inside my src directory.
+•	I have Action Utilities for interactions like click(), fill(), and selectOption().
+•	Locator Utilities to fetch elements dynamically.
+•	And Assert Utilities like expectElementToBeVisible() or expectElementToHaveText().
+
+By wrapping Playwright's native methods inside these custom utilities, 
+I added central error handling and logging. If Playwright updates a method tomorrow, 
+I only have to change it in one utility file, not in my 20 different test scripts.
+[Section 3: Test Data and Execution]
+For test execution, I used Playwright's test runner. I separated all my hardcoded 
+data into a specific testdata folder to keep the framework data-driven. The test layer 
+inside the tests/specs folder imports the Page Objects and Utilities. Because of this 
+abstraction, my actual test cases look almost like plain English BDD steps.
+I successfully automated 20 End-to-End test cases covering complex scenarios like dynamic 
+sorting validation using JavaScript array manipulation, cross-page cart validations, and 
+the complete checkout pipeline.
+
+[Section 4: Reporting & CI/CD Integration]
+Finally, a framework is only as good as its execution strategy.
+•	For reporting, besides Playwright's default HTML report, I integrated Allure Reports 
+to generate highly visual, detailed execution dashboards.
+•	To achieve Continuous Integration, I configured GitHub Actions. I wrote a YAML workflow 
+so that whenever new code is pushed to the repository, a cloud instance is spun up, dependencies 
+are installed, all 20 tests are executed headlessly, and the artifacts are safely uploaded.
+
+Overall, this architecture—combining Playwright’s speed, TypeScript’s strict typing, 
+a Function-based POM, and automated CI/CD pipelines—makes the framework enterprise-ready, 
+fast, and highly reliable.
+

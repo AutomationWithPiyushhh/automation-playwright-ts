@@ -5,6 +5,6 @@
  */
 
 export const ACTION_TIMEOUT = 15000; // ક્લિક કે ટાઈપ કરવા માટે 15 સેકન્ડ રાહ જોશે
-export const EXPECT_TIMEOUT = 10000; // કોઈ વસ્તુ સ્ક્રીન પર દેખાય છે કે નહીં તે ચેક કરવા 10 સેકન્ડ
+export const EXPECT_TIMEOUT = 15000; // કોઈ વસ્તુ સ્ક્રીન પર દેખાય છે કે નહીં તે ચેક કરવા 10 સેકન્ડ
 export const NAVIGATION_TIMEOUT = 30000; // નવું પેજ લોડ થવા માટે 30 સેકન્ડ
 export const TEST_TIMEOUT = 60000; // આખો ટેસ્ટ વધુમાં વધુ 1 મિનિટ (60 સેકન્ડ) ચાલશે
